@@ -1,0 +1,81 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 100vw;
+  color: #ccc;
+  font-size: 1.75vmin;
+  background: #222;
+}
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+a {
+  color: #eee;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+select,
+input {
+  margin-left: 2vmin;
+}
+.companies-container {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  border-radius: 2vmin;
+  margin: 2vmin;
+  user-select: none;
+}
+.companies-container p {
+  color: #666;
+}
+.company-wrapper {
+  background: #000;
+  border-radius: 2vmin;
+  padding: 1vmin;
+  margin: 1vmin;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+.company-wrapper:hover {
+  background: #666;
+}
+.title {
+  width: 90%;
+  text-align: center;
+  align-self: center;
+}
+.details-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.input-wrap,
+.wrap {
+  display: flex-block;
+  text-align: center;
+  background: #111;
+  border-radius: 1vmin;
+  margin: .5vmin;
+  padding: 1vmin;
+  pointer-events: none;
+}
+/* .wrap:hover {
+  background: #333;
+} */
+
+.input-wrap {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 1vmin;
+}

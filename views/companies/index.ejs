@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<h2>Company List</h2>
+
+<% companies.forEach(function(c) { %>
+  <section class="company-container" id="<%= c.name %>">
+  <article class="company-wrapper">
+    <div class="name wrap"><%= c.name %></div>
+      <div class="details-container">
+        <div class="founded wrap"><p>Year Founded</p><br><%= c.founded %></div>
+        <div class="employees wrap"><p>Employees</p><br><%= c.employees %></div>
+        <div class="active wrap"><p>Active</p><br><%= c.active ? 'Yes' : 'No' %></div>
+        <div class="products wrap"><p>Products</p><br><%= c.products.join(', ') %></div>
+        <div class="ceo wrap"><p>CEO</p><br><%= c.ceo.name %><br>Age: <%= c.ceo.age %></div>
+      </div>
+    </div>
+  </article>
+</section>
+<% }) %>
+
+<%- include('../partials/footer') %>
