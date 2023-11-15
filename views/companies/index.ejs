@@ -1,10 +1,12 @@
 <%- include('../partials/header') %>
 
 <h2>Company List</h2>
-
+<div class="add-container">
+  <div class="add-button" id="add-button">Add Company</div>
+</div>
 <% companies.forEach(function(c) { %>
-  <section class="company-container" id="<%= c.name %>">
-  <article class="company-wrapper">
+  <section class="company-container">
+  <article class="company-wrapper" id="<%= c.name %>">
     <div class="name wrap"><%= c.name %></div>
       <div class="details-container">
         <div class="founded wrap"><p>Year Founded</p><br><%= c.founded %></div>

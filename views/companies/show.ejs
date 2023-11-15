@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h2>Company Details</h2>
+<section class="company-container">
+  <article class="company-wrapper" id="<%= company.name %>">
+    <div class="name wrap"><%= company.name %></div>
+      <div class="details-container">
+        <div class="founded wrap"><p>Year Founded</p><br><%= company.founded %></div>
+        <div class="employees wrap"><p>Employees</p><br><%= company.employees %></div>
+        <div class="active wrap"><p>Active</p><br><%= company.active ? 'Yes' : 'No' %></div>
+        <div class="products wrap"><p>Products</p><br><%= company.products.join(', ') %></div>
+        <div class="ceo wrap"><p>CEO</p><br><%= company.ceo.name %><br>Age: <%= company.ceo.age %></div>
+      </div>
+    </div>
+  </article>
+</section>
+<div class="options-container">
+  <div class="wrap" id="edit-button">Edit Company Details</div>
+  <div class="wrap" id="delete-button">Delete Entry</div>
+</div>
+
+<%- include('../partials/footer') %>
+

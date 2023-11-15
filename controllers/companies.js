@@ -4,6 +4,19 @@ module.exports = {
   index,
   new: newCompany,
   create,
+  show,
+}
+
+function show(req, res) {
+  // console.log(req.params.id)
+  Company.find({name: req.params.id})
+    .then((result) => {
+      res.render('companies/show', {
+        company: result[0],
+        title: 'Company Details'
+      })
+    })
+    .catch((err) => res.send(err))
 }
 
 function newCompany(req, res) {
@@ -44,10 +57,7 @@ async function create(req, res) {
 
   try {
     await Company.create(req.body)
-    res.redirect('./companies/index', {
-      title: 'Add a Company',
-      err: ''
-    })
+    res.redirect('/')
   } catch (err) {
     res.render('./companies/new', { title: 'Error', err: err.message})
   }

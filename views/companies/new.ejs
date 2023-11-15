@@ -1,40 +1,19 @@
 <%- include('../partials/header') %>
 
 <h2>Add a New Company</h2>
-<form action="/" method="POST">
-
-  <label class="input-wrap">Company Name:
-    <input type="text" name="name">
-  </label><br>
-
-  <label class="input-wrap">Date Founded:
-    <input type="text" name="founded">
-  </label><br>
-
-  <label class="input-wrap">Number of Employees:
-    <input type="number" name="employees">
-  </label><br>
-
-  <label class="input-wrap">Is Company Active:
-    <input type="checkbox" name="active" checked>
-  </label><br>
-
-  <label class="input-wrap">Products (comma separated):
-    <input type="text" name="products">
-  </label><br>
-
-  <div class="ceo-details">
-    <label for="ceo-name">CEO Name:
-      <input type="text" name="ceoName">
-    </label>
-    <label for="ceo-age">CEO Age:
-      <input type="text" name="ceoAge">
-    </label>
-  </div>
+<form action="/" method="POST" class="form-container">
+    <input type="text" name="name" placeholder="Company Name">
+    <input type="text" name="founded" placeholder="Date Founded">
+    <input type="number" name="employees" placeholder="Number of Employees">
+    <input type="text" name="products" placeholder="Products (comma separated)">
+    <input type="text" name="ceoName" placeholder="CEO Name">
+    <input type="text" name="ceoAge" placeholder="CEO Age">
+    <select name="active">
+      <option value="active">Active Company</option>
+      <option value="inactive">Inactive Company</option>
+    </select>
   <br>
-
   <button type="submit">Add Company!</button>
-
 </form>
 
 <p><%= err %></p>

@@ -23,17 +23,34 @@ p {
 }
 select,
 input {
-  margin-left: 2vmin;
+  height: 4vmin;
+  width: 50%;
+  margin: 2vmin;
 }
-.companies-container {
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+    background: #111;
+    border-radius: 1vmin;
+    margin: 2vmin;
+    padding: 2vmin;
+}
+.company-container {
   display: flex;
   flex-direction: column;
   background: #333;
   border-radius: 2vmin;
   margin: 2vmin;
   user-select: none;
+  pointer-events: none;
+  cursor: pointer;
 }
-.companies-container p {
+.company-container p {
   color: #666;
 }
 .company-wrapper {
@@ -48,6 +65,9 @@ input {
 .company-wrapper:hover {
   background: #666;
 }
+.company-wrapper:active {
+  background: #333;
+}
 .title {
   width: 90%;
   text-align: center;
@@ -56,6 +76,7 @@ input {
 .details-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  pointer-events: none;
 }
 
 .input-wrap,
@@ -78,4 +99,43 @@ input {
   flex-direction: row;
   margin: 0;
   padding: 1vmin;
+  pointer-events: auto;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.add-button {
+  width: 75%;
+  display: flex-block;
+  text-align: center;
+  background: #111;
+  border-radius: 1vmin;
+  margin: .5vmin;
+  padding: 1vmin;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.add-button:hover {
+  background: #666;
+}
+.options-container {
+  pointer-events: none;
+}
+#delete-button,
+#edit-button {
+  pointer-events: auto;
+  user-select: none;
+  cursor: pointer;
+}
+#delete-button:hover,
+#edit-button:hover {
+  background: #666;
+}
+#delete-button:active,
+#edit-button:active {
+  background: #333;
 }
